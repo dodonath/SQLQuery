@@ -1,0 +1,321 @@
+{
+  "fromColumn": {
+    "columns": [
+      {
+        "entityName": "t11",
+        "name": "column1"
+      },
+      {
+        "entityName": "t11",
+        "name": "column2"
+      },
+      {
+        "entityName": "t11",
+        "name": "column3"
+      }
+    ]
+  },
+  "from": {
+    "type": "SUBQUERY",
+    "entityName": "t11",
+    "subquery": {
+      "fromColumn": {
+        "columns": [
+          {
+            "entityName": "t1",
+            "name": "column1"
+          },
+          {
+            "entityName": "t1",
+            "name": "column2"
+          },
+          {
+            "entityName": "t1",
+            "name": "column3"
+          }
+        ]
+      },
+      "from": {
+        "type": "NORMAL",
+        "table": {
+          "name": "table1",
+          "entityName": "t1"
+        }
+      },
+      "where": {
+        "conditions": [
+          {
+            "lhs": {
+              "type": "NORMAL",
+              "column": {
+                "entityName": "t1",
+                "name": "column1"
+              }
+            },
+            "rhs": {
+              "type": "NORMAL",
+              "column": {
+                "columnType": "NUMBER",
+                "columnValues": [
+                  "1"
+                ]
+              },
+              "operator": "EQUALS_TO"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "where": {
+    "conditions": [
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column1"
+          }
+        },
+        "rhs": {
+          "type": "SUBQUERY",
+          "subquery": {
+            "columns": [
+              {
+                "entityName": "t2",
+                "name": "column1"
+              },
+              {
+                "entityName": "t2",
+                "name": "column2"
+              },
+              {
+                "entityName": "t2",
+                "name": "column3"
+              }
+            ],
+            "fromColumn": {
+              "columns": [
+                {
+                  "entityName": "t2",
+                  "name": "column1"
+                }
+              ]
+            },
+            "from": {
+        "type": "NORMAL",
+        "table": {
+          "name": "table2",
+          "entityName": "t2"
+        }
+      },
+            "where": {
+              "conditions": [
+                {
+                  "lhs": {
+                    "type": "NORMAL",
+                    "column": {
+                      "entityName": "t2",
+                      "name": "column1"
+                    }
+                  },
+                  "rhs": {
+                    "type": "NORMAL",
+                    "column": {
+                      "columnType": "STRING",
+                      "columnValues": [
+                        "1",
+                        "2",
+                        "3"
+                      ]
+                    },
+                    "operator": "IN"
+                  }
+                }
+              ]
+            }
+          },
+          "operator": "EQUALS_TO"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "GREATER_THAN"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "LESS_THAN"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "GREATER_THAN_EQUALS"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "LESS_THAN_EQUALS"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1",
+              "2"
+            ]
+          },
+          "operator": "BETWEEN"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "STRING",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "LIKE"
+        },
+        "appendWith": "AND"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "column": {
+            "columnType": "NUMBER",
+            "columnValues": [
+              "1"
+            ]
+          },
+          "operator": "NOT_EQUALS_TO"
+        },
+        "appendWith": "OR"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "operator": "IS_NULL"
+        },
+        "appendWith": "OR"
+      },
+      {
+        "lhs": {
+          "type": "NORMAL",
+          "column": {
+            "entityName": "t11",
+            "name": "column2"
+          }
+        },
+        "rhs": {
+          "type": "NORMAL",
+          "operator": "IS_NOT_NULL"
+        }
+      }
+    ]
+  },
+  "orderBy": {
+    "orderBys": [
+      {
+        "entityName": "t11",
+        "name": "column2",
+        "orderBy": "ASC"
+      }
+    ]
+  }
+}
