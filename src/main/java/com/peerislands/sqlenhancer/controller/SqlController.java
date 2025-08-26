@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 
 @Slf4j
-@OpenAPIDefinition(info = @Info(title = "SqlEnhancer", version = "1.0", description = "Sql defination"))
+@OpenAPIDefinition(info = @Info(title = "SqlEnhancer", version = "1.1", description = "Sql defination"))
 @RestController
 @RequestMapping("/sqlEnhancer/sqlQuery")
 public class SqlController {
